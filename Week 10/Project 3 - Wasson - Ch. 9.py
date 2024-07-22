@@ -13,13 +13,11 @@ class temperatureCalcuator (EasyFrame):
         self.calcuatefahrenheitButton = self.addButton(text = "<<<<", row = 3, column = 2, command = self.fahrenheitConversion)
 
     def celsiusConversion(self):
-        fahrenheit = self.fahrenheitField.getNumber()
-        celsius = (fahrenheit - 32) * (5/9)
+        Celsius = (self.fahrenheitField.getNumber() - 32) * (5/9)
         self.celsiusField.setNumber(celsius)
 
     def fahrenheitConversion(self):
-        celsius = self.celsiusField.getNumber()
-        fahrenheit = celsius * (9/5) + 32
+        Fahrenheit = self.celsiusField.getNumber() * (9/5) + 32
         self.fahrenheitField.setNumber(fahrenheit)
         
 def main():
